@@ -8,10 +8,17 @@ The first time this script is run, you will be prompted to save your credentials
 Once the price has been retrieved it will be written to disk along with the time that the price will be refreshed online. This means you can run this script as often as you like but it will only retrieve the current price from the website when it needs to.
 
 ## Requirements
-You need to be a Flick customer to use this script. It has been tested on Python 3.6 but should work on other versions of Python 3. Python 2 is not supported.
+You need to be a Flick customer to use this script. It has been tested on Python 3.6 but should work on other versions of Python 3. Python 2 is not supported. Requirements have been added to a Piplock file so you'll need to have pipenv installed and then can use `pipenv install` to install requirements. If you want to install requirements manually, you'll need the following:
+* requests
+* beautifulsoup4
+* html5lib
 
 ## Installation
-Git clone this repository to your computer and run the spotprice.py script.
+1. Git clone this repository to your computer
+2. Change to the directory that you've just cloned
+3. pipenv install
+4. pipenv shell
+5. ./spotprice.py
 
 ## Output
 The script will prompt you for credentials if it doesn't have a .credentials file, otherwise it will only output the current spot price rounded to one decimal.
