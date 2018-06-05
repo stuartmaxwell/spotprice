@@ -2,6 +2,7 @@
 .cookies
 .credentials
 .price
+Pipfile.lock
 
 # Editor specific
 .vscode

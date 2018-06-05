@@ -19,6 +19,10 @@ You need to be a Flick customer to use this script. It has been tested on Python
 3. pipenv install
 4. pipenv shell
 5. ./spotprice.py
+6. pipenv exit
+
+## Running the script
+To run the script without activating the pipenv shell, use the following command: `pipenv run python spotprice.py`
 
 ## Output
 The script will prompt you for credentials if it doesn't have a .credentials file, otherwise it will only output the current spot price rounded to one decimal.
