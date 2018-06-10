@@ -104,7 +104,7 @@ def get_online_price():
         password = credentials[1]
 
         # We need to get the authenticity_token and the UTF hidden form fields
-        soup = BeautifulSoup(req.content, "html5lib")
+        soup = BeautifulSoup(req.content, "html.parser")
         token_value = soup.find("input", {"name": "authenticity_token"})["value"]
         utf_value = soup.find("input", {"name": "utf8"})["value"]
 
@@ -150,7 +150,7 @@ def get_online_price():
         pass
 
     # Get the spot price
-    soup = BeautifulSoup(req.text, "html5lib")
+    soup = BeautifulSoup(req.text, "html.parser")
     div = soup.select_one("div[data-react-class=FlickNeedle]")
     div_json = json.loads(div["data-react-props"])
     price_value = div_json["currentPeriod"]["price"]["value"]
