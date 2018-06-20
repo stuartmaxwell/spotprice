@@ -14,10 +14,10 @@ from datetime import datetime
 
 
 # These are files required for the script:
-credential_file = Path(".credentials")
-cookie_file = Path(".cookies")
-price_file = Path(".price")
-
+scriptpath = os.path.dirname(os.path.realpath(__file__))
+credential_file = Path(scriptpath, ".credentials")
+cookie_file = Path(scriptpath, ".cookies")
+price_file = Path(scriptpath, ".price")
 
 def save_credentials():
     """Prompts you for your credentials and tries to save them to disk.
