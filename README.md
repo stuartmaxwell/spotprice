@@ -1,6 +1,6 @@
 # spotprice
 
-Python script to retrieve the current spot price for your Flick account.
+This Python script retrieves the current spot price for your Flick account by scraping the Flick dashboard.
 
 ## Overview
 The first time this script is run, you will be prompted to save your credentials to a file. You can also create this file yourself by creating a file called ".credentials" in the same directory as this script with your username and password in the file. The username (your email address) must be on the first line and your password must be on the second line. Save the file with appropriate permissions so that only you can read the file. The cookies associated with your logon details will also be saved to disk to prevent unnecessary authentication.
